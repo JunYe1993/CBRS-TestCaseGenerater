@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Web Crawler</title>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="./bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="./jquery/3.4.1/jquery.min.js"></script>
+     <script src="./bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <script src="./testcase.js"></script>
+     <script src="./index.js"></script>
+</head>
+<body>
+     <div class="jumbotron text-center">
+          <h1><abbr>CBRS Testcase Generator</abbr></h1>
+          <h2><small><a href="./WINNF-TS-0122-V1.0.1 CBRS CBSD Test Specification.pdf" target="_BLANK">WINNF-TS-0122-V1.0.1 CBRS CBSD Test Specification</a></small></h2>
+     </div>
+     
+     <div class="container">
+          <div class="row">
+               <div class="col-sm-6">
+                    <h3>Test Plan</h3>
+                    <div class="radio"><label><input type="radio" name="testplan" value="CBSD"><span>CBSD</span></label></div>
+                    <div class="radio"><label><input type="radio" name="testplan" value= "DP" ><span>CBSD with Domain Proxy</span></label></div></div>
+               <div class="col-sm-6">
+                    <h3>Conditional Test Case</h3>
+                    <table class="table">
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C1</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports multi-step registration message</span></td></tr>
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C2</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports single-step registration with no CPI-signed
+                                        data in the registration message. By definition, this is a subset of Category A
+                                        devices which determine all registration information, including location,
+                                        without CPI intervention.</span></td></tr>
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C3</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports single-step registration containing CPIsigned 
+                                        data in the registration message.</span></td></tr>
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C4</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports RECEIVED_POWER_WITHOUT_GRANT measurement report 
+                                        type.</span></td></tr>
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C5</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports RECEIVED_POWER_WITH_GRANT measurement report type.</span></td></tr>
+                         <tr>
+                              <td><div class="checkbox"><label><input type="checkbox" class="condition"><span>C6</span></label></div></td>
+                              <td><span>Mandatory for UUT which supports parameter change being made at the UUT and prior 
+                                        to sending a deregistration.</span></td></tr>
+                    </table>
+          </div>
+     </div>
+
+     <div class="container">
+          <div class="row">
+               <div class="col-sm-12">
+                    <h3>Test Cases</h3>
+                    <div id="testcaelist"></div></div>
+          </div>
+     </div>
+</body>
+</html>
